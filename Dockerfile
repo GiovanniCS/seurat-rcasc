@@ -18,7 +18,8 @@ RUN apt-get -y install libbz2-dev
 RUN apt-get -y install libpcre3-dev
 RUN aptitude -y install libreadline-dev
 RUN apt-get -y install libcurl4-openssl-dev
-RUN /tmp/configure --with-tcltk
+RUN apt-get -y install tcl-dev tk-dev
+RUN /tmp/configure --with-tcltk --with-tcl-config=/usr/lib/tclConfig.sh --with-tk-config=/usr/lib/tkConfig.sh
 RUN make
 RUN make install
 
@@ -229,4 +230,6 @@ RUN R CMD INSTALL --build tmp/spatstat.utils_1.20-2.tar.gz \
 	tmp/Seurat_3.2.2.tar.gz 
 
 
-
+RUN R -e "install.packages('vioplot',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('argparser',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('Publish',dependencies=TRUE, repos='http://cran.rstudio.com/')"
