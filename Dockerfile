@@ -18,7 +18,7 @@ RUN apt-get -y install libbz2-dev
 RUN apt-get -y install libpcre3-dev
 RUN aptitude -y install libreadline-dev
 RUN apt-get -y install libcurl4-openssl-dev
-RUN /tmp/configure
+RUN /tmp/configure --with-tcltk
 RUN make
 RUN make install
 
