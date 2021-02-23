@@ -105,7 +105,7 @@ RUN R CMD INSTALL --build tmp/globals_0.14.0.tar.gz \
 	tmp/future_1.21.0.tar.gz \
 	tmp/future.apply_1.7.0.tar.gz 	
 
-RUN apt-get install libssl-dev
+RUN apt-get update && apt-get install libssl-dev
 
 COPY ["ggrepel_0.9.0.tar.gz", "ggridges_0.5.3.tar.gz", "httr_1.4.2.tar.gz", "ica_1.0-2.tar.gz", \
 	"igraph_1.2.6.tar.gz", "irlba_2.3.3.tar.gz", "leiden_0.3.6.tar.gz", "lmtest_0.9-38.tar.gz", \
@@ -231,5 +231,7 @@ RUN R CMD INSTALL --build tmp/spatstat.utils_1.20-2.tar.gz \
 
 
 RUN R -e "install.packages('vioplot',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+
 RUN R -e "install.packages('argparser',dependencies=TRUE, repos='http://cran.rstudio.com/')"
+
 RUN R -e "install.packages('Publish',dependencies=TRUE, repos='http://cran.rstudio.com/')"
