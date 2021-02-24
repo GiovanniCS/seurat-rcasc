@@ -49,12 +49,11 @@ RUN R CMD INSTALL --build tmp/assertthat_0.2.1.tar.gz \
     tmp/tibble_3.0.4.tar.gz
 
 
-COPY [ "plyr_1.8.6.tar.gz","./brio_1.1.0.tar.gz", "./ps_1.5.0.tar.gz", "./processx_3.4.5.tar.gz", "./callr_3.5.1.tar.gz", \
+COPY [ "./brio_1.1.0.tar.gz", "./ps_1.5.0.tar.gz", "./processx_3.4.5.tar.gz", "./callr_3.5.1.tar.gz", \
        "./rprojroot_2.0.2.tar.gz", "./desc_1.2.0.tar.gz", "./evaluate_0.14.tar.gz", "./jsonlite_1.7.2.tar.gz", \
        "./praise_1.0.0.tar.gz", "./R6_2.5.0.tar.gz", "/tmp/" ] 
 
 RUN R CMD INSTALL --build tmp/brio_1.1.0.tar.gz \
-	tmp/plyr_1.8.6.tar.gz \
 	tmp/ps_1.5.0.tar.gz \ 
 	tmp/R6_2.5.0.tar.gz \
 	tmp/processx_3.4.5.tar.gz \ 
@@ -112,7 +111,7 @@ COPY ["ggrepel_0.9.0.tar.gz", "ggridges_0.5.3.tar.gz", "httr_1.4.2.tar.gz", "ica
 	"igraph_1.2.6.tar.gz", "irlba_2.3.3.tar.gz", "leiden_0.3.6.tar.gz", "lmtest_0.9-38.tar.gz", \
 	"matrixStats_0.57.0.tar.gz", "miniUI_0.1.1.1.tar.gz", "patchwork_1.1.1.tar.gz", \
 	"pbapply_1.4-3.tar.gz", "plotly_4.9.3.tar.gz", "png_0.1-7.tar.gz", "RANN_2.6.1.tar.gz", \
-	"Rcpp_1.0.5.tar.gz", "curl_4.3.tar.gz", "mime_0.9.tar.gz", \
+	"Rcpp_1.0.5.tar.gz", "plyr_1.8.6.tar.gz", "curl_4.3.tar.gz", "mime_0.9.tar.gz", \
 	"openssl_1.4.1.tar.gz", "askpass_1.1.tar.gz", "sys_3.4.tar.gz", "reticulate_1.18.tar.gz", \
 	"rappdirs_0.3.1.tar.gz","zoo_1.8-8.tar.gz", "shiny_1.5.0.tar.gz", "htmltools_0.5.1.tar.gz", \
 	"/tmp/"]
@@ -121,6 +120,7 @@ COPY ["ggrepel_0.9.0.tar.gz", "ggridges_0.5.3.tar.gz", "httr_1.4.2.tar.gz", "ica
 
 RUN R CMD INSTALL --build tmp/Rcpp_1.0.5.tar.gz \
 	tmp/ggrepel_0.9.0.tar.gz \
+	tmp/plyr_1.8.6.tar.gz \
 	tmp/ggridges_0.5.3.tar.gz \
 	tmp/curl_4.3.tar.gz \
 	tmp/mime_0.9.tar.gz \
