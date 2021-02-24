@@ -3,7 +3,7 @@
 FROM library/ubuntu as UBUNTU_BASE
 MAINTAINER g.pia91@gmail.com
 ARG DEBIAN_FRONTEND=noninteractive
-COPY ./R-3.6.0 /tmp
+COPY ./R-3.4.4 /tmp
 COPY ./home/* /home/
 RUN apt-get update
 RUN apt-get -y install gfortran
@@ -187,12 +187,13 @@ RUN R CMD INSTALL --build tmp/yaml_2.2.1.tar.gz \
 	tmp/RcppAnnoy_0.0.18.tar.gz
 	
 
-COPY ["caTools_1.18.1.tar.gz", "gtools_3.8.2.tar.gz", "bitops_1.0-6.tar.gz", \
+COPY ["ape_5.4-1.tar.gz","caTools_1.18.1.tar.gz", "gtools_3.8.2.tar.gz", "bitops_1.0-6.tar.gz", \
 	"RcppArmadillo_0.10.1.2.2.tar.gz", "reshape2_1.4.4.tar.gz", "gridExtra_2.3.tar.gz", \
 	"stringr_1.4.0.tar.gz", "stringi_1.5.3.tar.gz","/tmp/"]
 
 
 RUN R CMD INSTALL --build tmp/bitops_1.0-6.tar.gz \
+	tmp/ape_5.4-1.tar.gz \
 	tmp/caTools_1.18.1.tar.gz \
 	tmp/gtools_3.8.2.tar.gz \
 	tmp/gplots_3.1.1.tar.gz\
@@ -210,7 +211,7 @@ RUN R CMD INSTALL --build tmp/bitops_1.0-6.tar.gz \
 COPY [ "spatstat.data_1.7-0.tar.gz", "deldir_0.2-3.tar.gz", "abind_1.4-5.tar.gz", \
 	"tensor_1.5.tar.gz", "polyclip_1.10-0.tar.gz", "goftest_1.2-2.tar.gz", \
 	"spatstat.utils_1.20-2.tar.gz", "FNN_1.1.3.tar.gz", "RSpectra_0.16-0.tar.gz", \
-	"dqrng_0.2.1.tar.gz", "sitmo_2.0.1.tar.gz", "Seurat_3.2.2.tar.gz", "/tmp/"]
+	"dqrng_0.2.1.tar.gz", "sitmo_2.0.1.tar.gz", "Seurat_3.2.0.tar.gz", "/tmp/"]
 
 RUN R CMD INSTALL --build tmp/spatstat.utils_1.20-2.tar.gz \
 	tmp/spatstat.data_1.7-0.tar.gz \
@@ -227,7 +228,7 @@ RUN R CMD INSTALL --build tmp/spatstat.utils_1.20-2.tar.gz \
 	tmp/sitmo_2.0.1.tar.gz \	
 	tmp/dqrng_0.2.1.tar.gz \
 	tmp/uwot_0.1.10.tar.gz \
-	tmp/Seurat_3.2.2.tar.gz 
+	tmp/Seurat_3.2.0.tar.gz 
 
 
 RUN R -e "install.packages('vioplot',dependencies=TRUE, repos='http://cran.rstudio.com/')"
