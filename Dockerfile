@@ -68,7 +68,7 @@ RUN R CMD INSTALL --build tmp/brio_1.1.0.tar.gz \
 COPY [ "./rstudioapi_0.13.tar.gz", "./diffobj_0.3.3.tar.gz", "./rematch2_2.1.2.tar.gz", \
 	"./waldo_0.2.3.tar.gz", "./prettyunits_1.1.1.tar.gz", "./withr_2.3.0.tar.gz", 	\
 	"./pkgbuild_1.2.0.tar.gz", "./pkgload_1.1.0.tar.gz", "./testthat_3.0.1.tar.gz", \
-	"./isoband_0.2.3.tar.gz", "./ggplot2_3.3.3.tar.gz", "./cowplot_0.9.4.tar.gz", \
+	"./isoband_0.2.3.tar.gz", "./ggplot2_3.3.3.tar.gz",  \
 	"./fitdistrplus_1.1-3.tar.gz" , "scales_1.1.1.tar.gz", "gtable_0.3.0.tar.gz", \
 	"farver_2.0.3.tar.gz", "labeling_0.4.2.tar.gz", "munsell_0.5.0.tar.gz", \
 	"RColorBrewer_1.1-2.tar.gz", "viridisLite_0.3.0.tar.gz", "colorspace_2.0-0.tar.gz" ,"/tmp/" ]
@@ -92,7 +92,6 @@ RUN R CMD INSTALL --build tmp/rstudioapi_0.13.tar.gz \
 	tmp/scales_1.1.1.tar.gz \
 	tmp/gtable_0.3.0.tar.gz \ 
 	tmp/ggplot2_3.3.3.tar.gz \
-	tmp/cowplot_0.9.4.tar.gz \
 	tmp/fitdistrplus_1.1-3.tar.gz
 
 
@@ -140,7 +139,7 @@ RUN R CMD INSTALL --build tmp/Rcpp_1.0.5.tar.gz \
 
 
 
-COPY [ "httpuv_1.5.5.tar.gz", "xtable_1.8-4.tar.gz", "sourcetools_0.1.7.tar.gz", \
+COPY [ "./cowplot_0.9.4.tar.gz","httpuv_1.5.5.tar.gz", "xtable_1.8-4.tar.gz", "sourcetools_0.1.7.tar.gz", \
 	"later_1.1.0.1.tar.gz", "promises_1.1.1.tar.gz", "fastmap_1.0.1.tar.gz", \
 	"commonmark_1.7.tar.gz", "BH_1.75.0-0.tar.gz", "base64enc_0.1-3.tar.gz", \
 	"htmlwidgets_1.5.3.tar.gz", "tidyr_1.1.2.tar.gz", "dplyr_1.0.3.tar.gz",\
@@ -149,6 +148,7 @@ COPY [ "httpuv_1.5.5.tar.gz", "xtable_1.8-4.tar.gz", "sourcetools_0.1.7.tar.gz",
 
 
 RUN R CMD INSTALL --build tmp/BH_1.75.0-0.tar.gz \
+	tmp/cowplot_0.9.4.tar.gz \
 	tmp/later_1.1.0.1.tar.gz \ 
 	tmp/promises_1.1.1.tar.gz \	
 	tmp/httpuv_1.5.5.tar.gz \
