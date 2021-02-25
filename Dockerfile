@@ -208,14 +208,14 @@ RUN R CMD INSTALL --build tmp/bitops_1.0-6.tar.gz \
 	tmp/sctransform_0.3.2.tar.gz 
 
 
-COPY [ "spatstat.data_1.4-0.tar.gz", "deldir_0.2-3.tar.gz", "abind_1.4-5.tar.gz", \
+COPY [ "spatstat.data_1.4-0.tar.gz", "deldir_0.1-15.tar.gz", "abind_1.4-5.tar.gz", \
 	"tensor_1.5.tar.gz", "polyclip_1.10-0.tar.gz", "goftest_1.2-2.tar.gz", \
 	"spatstat.utils_1.20-2.tar.gz", "FNN_1.1.3.tar.gz", "RSpectra_0.16-0.tar.gz", \
 	"dqrng_0.2.1.tar.gz", "sitmo_2.0.1.tar.gz", "Seurat_3.2.0.tar.gz", "/tmp/"]
 
 RUN R CMD INSTALL --build tmp/spatstat.utils_1.20-2.tar.gz \
 	tmp/spatstat.data_1.4-0.tar.gz \
-	tmp/deldir_0.2-3.tar.gz \
+	tmp/deldir_0.1-15.tar.gz \
 	tmp/abind_1.4-5.tar.gz \
 	tmp/tensor_1.5.tar.gz \
 	tmp/polyclip_1.10-0.tar.gz \
