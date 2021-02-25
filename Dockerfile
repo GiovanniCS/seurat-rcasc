@@ -167,7 +167,7 @@ RUN R CMD INSTALL --build tmp/BH_1.75.0-0.tar.gz \
 COPY ["yaml_2.2.1.tar.gz", "cpp11_0.2.5.tar.gz", "tidyselect_1.1.0.tar.gz", \ 
 	"generics_0.1.0.tar.gz", "RcppAnnoy_0.0.18.tar.gz", "ROCR_1.0-7.tar.gz", \
 	"rsvd_1.0.3.tar.gz", "Rtsne_0.15.tar.gz", "sctransform_0.3.2.tar.gz", \
-	"spatstat_1.64-1.tar.gz", "uwot_0.1.10.tar.gz", "RcppEigen_0.3.3.9.1.tar.gz", \
+	"spatstat_1.56-1.tar", "uwot_0.1.10.tar.gz", "RcppEigen_0.3.3.9.1.tar.gz", \
 	"RcppProgress_0.4.2.tar.gz", "gplots_3.1.1.tar.gz", "/tmp/"]
 
 RUN R CMD INSTALL --build tmp/yaml_2.2.1.tar.gz \
@@ -220,7 +220,7 @@ RUN R CMD INSTALL --build tmp/spatstat.utils_1.20-2.tar.gz \
 	tmp/tensor_1.5.tar.gz \
 	tmp/polyclip_1.10-0.tar.gz \
 	tmp/goftest_1.2-2.tar.gz \ 
-	tmp/spatstat_1.64-1.tar.gz \
+	tmp/spatstat_1.56-1.tar \
 	tmp/FNN_1.1.3.tar.gz \
 	tmp/RcppEigen_0.3.3.9.1.tar.gz \
 	tmp/RcppProgress_0.4.2.tar.gz \
