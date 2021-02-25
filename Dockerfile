@@ -25,7 +25,7 @@ RUN make install
 
 
 
-COPY [ "./assertthat_0.2.1.tar.gz", "./crayon_1.3.4.tar.gz", "./ellipsis_0.3.1.tar.gz",\
+COPY [ "Matrix_1.2-13.tar.gz","./assertthat_0.2.1.tar.gz", "./crayon_1.3.4.tar.gz", "./ellipsis_0.3.1.tar.gz",\
        "./fansi_0.4.1.tar.gz", "./cli_2.2.0.tar.gz", "./magrittr_2.0.1.tar.gz", \
        "./utf8_1.1.4.tar.gz", "./pkgconfig_2.0.3.tar.gz", "./digest_0.6.27.tar.gz",\ 
        "./vctrs_0.3.6.tar.gz", "./pillar_1.4.7.tar.gz", "./tibble_3.0.4.tar.gz", \
@@ -34,6 +34,7 @@ COPY [ "./assertthat_0.2.1.tar.gz", "./crayon_1.3.4.tar.gz", "./ellipsis_0.3.1.t
 
 RUN R CMD INSTALL --build tmp/assertthat_0.2.1.tar.gz \
     tmp/crayon_1.3.4.tar.gz \
+	tmp/Matrix_1.2-13.tar.gz \
     tmp/rlang_0.4.10.tar.gz \
     tmp/ellipsis_0.3.1.tar.gz \ 
     tmp/fansi_0.4.1.tar.gz \
@@ -189,7 +190,7 @@ RUN R CMD INSTALL --build tmp/yaml_2.2.1.tar.gz \
 
 COPY ["ape_5.4-1.tar.gz","caTools_1.17.1.1.tar.gz", "gtools_3.8.2.tar.gz", "bitops_1.0-6.tar.gz", \
 	"RcppArmadillo_0.10.1.2.2.tar.gz", "reshape2_1.4.4.tar.gz", "gridExtra_2.3.tar.gz", \
-	"stringr_1.4.0.tar.gz", "stringi_1.5.3.tar.gz","Matrix_1.2-14.tar.gz","/tmp/"]
+	"stringr_1.4.0.tar.gz", "stringi_1.5.3.tar.gz","/tmp/"]
 
 
 RUN R CMD INSTALL --build tmp/bitops_1.0-6.tar.gz \
@@ -205,7 +206,6 @@ RUN R CMD INSTALL --build tmp/bitops_1.0-6.tar.gz \
 	tmp/stringr_1.4.0.tar.gz \
 	tmp/reshape2_1.4.4.tar.gz \
 	tmp/gridExtra_2.3.tar.gz \
-	tmp/Matrix_1.2-14.tar.gz \
 	tmp/sctransform_0.3.2.tar.gz 
 
 
