@@ -165,7 +165,7 @@ RUN R CMD INSTALL --build tmp/BH_1.75.0-0.tar.gz \
 
 
 COPY ["yaml_2.2.1.tar.gz", "cpp11_0.2.5.tar.gz", "tidyselect_1.1.0.tar.gz", \ 
-	"generics_0.1.0.tar.gz", "RcppAnnoy_0.0.18.tar.gz", "ROCR_1.0-11.tar.gz", \
+	"generics_0.1.0.tar.gz", "RcppAnnoy_0.0.18.tar.gz", "ROCR_1.0-7.tar.gz", \
 	"rsvd_1.0.3.tar.gz", "Rtsne_0.15.tar.gz", "sctransform_0.3.2.tar.gz", \
 	"spatstat_1.64-1.tar.gz", "uwot_0.1.10.tar.gz", "RcppEigen_0.3.3.9.1.tar.gz", \
 	"RcppProgress_0.4.2.tar.gz", "gplots_3.1.1.tar.gz", "/tmp/"]
@@ -197,7 +197,7 @@ RUN R CMD INSTALL --build tmp/bitops_1.0-6.tar.gz \
 	tmp/caTools_1.17.1.1.tar.gz \
 	tmp/gtools_3.8.2.tar.gz \
 	tmp/gplots_3.1.1.tar.gz\
-	tmp/ROCR_1.0-11.tar.gz \
+	tmp/ROCR_1.0-7.tar.gz \
 	tmp/rsvd_1.0.3.tar.gz \
 	tmp/Rtsne_0.15.tar.gz \
 	tmp/RcppArmadillo_0.10.1.2.2.tar.gz \
