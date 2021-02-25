@@ -189,7 +189,7 @@ RUN R CMD INSTALL --build tmp/yaml_2.2.1.tar.gz \
 
 COPY ["ape_5.4-1.tar.gz","caTools_1.17.1.1.tar.gz", "gtools_3.8.2.tar.gz", "bitops_1.0-6.tar.gz", \
 	"RcppArmadillo_0.10.1.2.2.tar.gz", "reshape2_1.4.4.tar.gz", "gridExtra_2.3.tar.gz", \
-	"stringr_1.4.0.tar.gz", "stringi_1.5.3.tar.gz","/tmp/"]
+	"stringr_1.4.0.tar.gz", "stringi_1.5.3.tar.gz","Matrix_1.2-14.tar.gz","/tmp/"]
 
 
 RUN R CMD INSTALL --build tmp/bitops_1.0-6.tar.gz \
@@ -205,6 +205,7 @@ RUN R CMD INSTALL --build tmp/bitops_1.0-6.tar.gz \
 	tmp/stringr_1.4.0.tar.gz \
 	tmp/reshape2_1.4.4.tar.gz \
 	tmp/gridExtra_2.3.tar.gz \
+	tmp/Matrix_1.2-14.tar.gz \
 	tmp/sctransform_0.3.2.tar.gz 
 
 
