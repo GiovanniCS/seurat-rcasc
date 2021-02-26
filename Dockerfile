@@ -231,6 +231,11 @@ RUN R CMD INSTALL --build tmp/spatstat.utils_1.20-2.tar.gz \
 	tmp/uwot_0.1.10.tar.gz \
 	tmp/Seurat_3.2.0.tar.gz 
 
+COPY [ "sandwich_2.5-0.tar.gz", "TH.data_1.0-9.tar.gz","/tmp/"]
+
+RUN R CMD INSTALL --build tmp/sandwich_2.5-0.tar.gz \
+	tmp/TH.data_1.0-9.tar.gz
+
 COPY [ "mvtnorm_1.0-8.tar.gz", "multcomp_1.4-8.tar.gz","VGAM_1.0-6.tar.gz","/tmp/"]
 
 RUN R CMD INSTALL --build tmp/mvtnorm_1.0-8.tar.gz \
