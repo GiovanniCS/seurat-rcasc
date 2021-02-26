@@ -235,7 +235,7 @@ COPY [ "mvtnorm_1.0-8.tar.gz", "multcomp_1.4-8.tar.gz","VGAM_1.0-6.tar.gz","/tmp
 
 RUN R CMD INSTALL --build tmp/mvtnorm_1.0-8.tar.gz \
 	tmp/multcomp_1.4-8.tar.gz \
-	tmp/VGAM_1.0-6.tar.g
+	tmp/VGAM_1.0-6.tar.gz
 
 RUN R -e "install.packages('vioplot',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
