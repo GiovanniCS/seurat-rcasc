@@ -231,6 +231,11 @@ RUN R CMD INSTALL --build tmp/spatstat.utils_1.20-2.tar.gz \
 	tmp/uwot_0.1.10.tar.gz \
 	tmp/Seurat_3.2.0.tar.gz 
 
+COPY [ "mvtnorm_1.0-8.tar.gz", "multcomp_1.4-8.tar.gz","VGAM_1.0-6.tar.gz","/tmp/"]
+
+RUN R CMD INSTALL --build tmp/mvtnorm_1.0-8.tar.gz \
+	tmp/multcomp_1.4-8.tar.gz \
+	tmp/VGAM_1.0-6.tar.g
 
 RUN R -e "install.packages('vioplot',dependencies=TRUE, repos='http://cran.rstudio.com/')"
 
